@@ -1,0 +1,43 @@
+#VARIABLES
+#set prompt="%{\033[36m%}%n%{\033[31m%}@%{\033[33m%}%m: %{\033[32m%}%B%~%b%# "
+set prompt="%m:%n{%h} (%~)%# "
+set autolist=ambiguous
+set addsuffix
+set autorehash
+set autoexpand
+set highlight
+set implicitcd
+set visiblebell
+set printexitvalue
+set correct=cmd
+set complete=enhance
+set EDITOR=nvi
+set VISUAL=nvi
+set path = ( ~/devel/android/tools/bin ~/devel/android-studio/bin ~/devel/flutter/bin $path /usr/pkg/bin /usr/scripts /opt/bin /usr/local/bin /snap/bin )
+
+#ENVIRONMENT
+setenv CC clang
+setenv CXX clang++
+setenv EDITOR vi
+setenv VISUAL vi
+setenv DVTM_TERM screen
+setenv ANDROID_HOME ~/devel/android
+
+#ALIAS
+alias vi nvi
+alias weather curl -4 wttr.in/quebec
+alias we weather
+alias cdd cd ..
+alias ls ls-F
+alias sl ls
+alias ttympv mpv -vo drm --profile=pseudo-gui
+alias cc ${CC}
+alias c++ ${CXX}
+alias cxx ${CXX}
+alias emacs emacs -nw
+alias yarn yarnpkg
+
+#KEYBINDS
+bindkey -v
+
+source /usr/local/share/cx/cx.csh
