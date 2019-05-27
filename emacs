@@ -2,10 +2,6 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
-(load-theme 'zenburn t)
-(setq inferior-lisp-program "/usr/bin/sbcl"
-      slime-contribs '(slime-fancy))
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -17,7 +13,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (perl6-mode avy weechat git-gutter+ evil-rsi evil-python-movement evil-magit smart-mode-line-powerline-theme smart-mode-line markdown-preview-mode markdown-mode helm evil-org evil-lispy zoom ranger dired-sidebar dired-k eyebrowse ido-completing-read+ go-mode kubernetes lua-mode magit nginx-mode nodejs-repl org python web-server znc web w3m zenburn-theme git-command git-gutter slime evil ##)))
+    (perl6-mode avy git-gutter+ smart-mode-line-powerline-theme smart-mode-line markdown-preview-mode markdown-mode helm zoom ranger dired-sidebar dired-k eyebrowse ido-completing-read+ go-mode lua-mode magit nodejs-repl org python web-server znc web w3m zenburn-theme git-gutter slime ##)))
  '(sml/mode-width
    (if
        (eq
@@ -95,6 +91,11 @@
  )
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
+
+(load-theme 'zenburn t)
+(setq inferior-lisp-program "/usr/bin/sbcl"
+      slime-contribs '(slime-fancy))
+
 
 (setq c-default-style "bsd"
       c-basic-offset 8
