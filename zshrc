@@ -1,7 +1,7 @@
 # Set up the prompt
 
 export prompt="%n@%m:%~%# "
-export path=( ${path} ~/devel/flutter/bin ~/devel/android-studio/bin ~/devel/fuchsia/.jiri_root/bin )
+export path=( ${path} ~/devel/flutter/bin ~/devel/android-studio/bin ~/devel/fuchsia/.jiri_root/bin ~/.yarn/bin )
 
 setopt histignorealldups sharehistory
 
@@ -60,5 +60,5 @@ function install_powerline_precmd() {
   precmd_functions+=(powerline_precmd)
 }
 
-export EDITOR=nvi
-export VISUAL=nvi
+export EDITOR=vi
+export VISUAL=vi
