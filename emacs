@@ -13,7 +13,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (perl6-mode avy git-gutter+ smart-mode-line-powerline-theme smart-mode-line markdown-preview-mode markdown-mode helm zoom ranger dired-sidebar dired-k eyebrowse ido-completing-read+ go-mode lua-mode magit nodejs-repl org python web-server znc web w3m zenburn-theme git-gutter slime ##)))
+    (rjsx-mode lispy ivy perl6-mode avy git-gutter+ smart-mode-line-powerline-theme smart-mode-line markdown-preview-mode markdown-mode helm zoom ranger dired-sidebar dired-k eyebrowse ido-completing-read+ go-mode lua-mode magit nodejs-repl org python web-server znc web w3m zenburn-theme git-gutter slime ##)))
  '(sml/mode-width
    (if
        (eq
@@ -101,11 +101,17 @@
       c-basic-offset 8
       indent-tabs-mode t
       tab-width 8)
+
 (add-hook 'python-mode-hook
 	  (lambda ()
 	    (setq indent-tabs-mode t)
 	    (setq python-indent 8)
 	    (setq tab-width 8)))
+
+(add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
+(setq js-indent-tabs-mode t)
+(setq js-indent-level 8)
+
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (eyebrowse-mode t)
