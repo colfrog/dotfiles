@@ -1,7 +1,8 @@
 # Set up the prompt
 
 export prompt="%n@%m:%~%# "
-export path=( ${path} ~/devel/flutter/bin ~/devel/android-studio/bin ~/devel/fuchsia/.jiri_root/bin ~/.yarn/bin )
+export path=( ${path} ~/devel/flutter/bin ~/devel/android-studio/bin ~/devel/fuchsia/.jiri_root/bin ~/.yarn/bin /usr/lib/dart/bin ~/devel/flutter/bin/cache/dart-sdk/bin ~/devel/flutter/.pub-cache/bin )
+export ANDROID_HOME=~/devel/android
 
 setopt histignorealldups sharehistory
 

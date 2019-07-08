@@ -13,7 +13,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (rjsx-mode lispy ivy perl6-mode avy git-gutter+ smart-mode-line-powerline-theme smart-mode-line markdown-preview-mode markdown-mode helm zoom ranger dired-sidebar dired-k eyebrowse ido-completing-read+ go-mode lua-mode magit nodejs-repl org python web-server znc web w3m zenburn-theme git-gutter slime ##)))
+    (flycheck-clojure cljr-helm flycheck-perl6 flycheck-clang-tidy clang-format rjsx-mode lispy ivy perl6-mode avy git-gutter+ smart-mode-line-powerline-theme smart-mode-line markdown-preview-mode markdown-mode helm zoom ranger dired-sidebar dired-k eyebrowse ido-completing-read+ go-mode lua-mode magit nodejs-repl org python web-server znc web w3m zenburn-theme git-gutter slime ##)))
  '(sml/mode-width
    (if
        (eq
@@ -93,25 +93,30 @@
 (put 'downcase-region 'disabled nil)
 
 (load-theme 'zenburn t)
+
+; lisp
 (setq inferior-lisp-program "/usr/bin/sbcl"
       slime-contribs '(slime-fancy))
 
-
+; C
 (setq c-default-style "bsd"
       c-basic-offset 8
       indent-tabs-mode t
       tab-width 8)
 
+; python
 (add-hook 'python-mode-hook
 	  (lambda ()
 	    (setq indent-tabs-mode t)
 	    (setq python-indent 8)
 	    (setq tab-width 8)))
 
+; javascript
 (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
-(setq js-indent-tabs-mode t)
-(setq js-indent-level 8)
+(setq js-indent-tabs-mode t
+      js-indent-level 8)
 
+(global-flycheck-mode)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (eyebrowse-mode t)
