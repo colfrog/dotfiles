@@ -1,12 +1,12 @@
 # Set up the prompt
 
 export prompt="%n@%m:%~%# "
-export path=( ${path} ~/devel/flutter/bin ~/devel/android-studio/bin ~/devel/fuchsia/.jiri_root/bin ~/.yarn/bin /usr/lib/dart/bin ~/devel/flutter/bin/cache/dart-sdk/bin ~/devel/flutter/.pub-cache/bin )
+export path=( ${path} ~/devel/flutter/bin ~/devel/android-studio/bin ~/devel/fuchsia/.jiri_root/bin ~/.yarn/bin /usr/lib/dart/bin ~/devel/flutter/bin/cache/dart-sdk/bin ~/devel/flutter/.pub-cache/bin ~/.local/bin )
 export ANDROID_HOME=~/devel/android
 
 setopt histignorealldups sharehistory
 
-# Use emacs keybindings even if our EDITOR is set to vi
+# Use vi line editor
 bindkey -v
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
@@ -46,19 +46,6 @@ function cx() {
 	if test -d $output; then
 		cd "`cxc -- $1`"
 	fi
-}
-
-function powerline_precmd() {
-    PS1="$(/home/laurent/go/bin/powerline-go -error $? -shell zsh)"
-}
-
-function install_powerline_precmd() {
-  for s in "${precmd_functions[@]}"; do
-    if [ "$s" = "powerline_precmd" ]; then
-      return
-    fi
-  done
-  precmd_functions+=(powerline_precmd)
 }
 
 export EDITOR=vi
