@@ -6,8 +6,8 @@ export ANDROID_HOME=~/devel/android
 
 setopt histignorealldups sharehistory
 
-# Use vi line editor
-bindkey -v
+# Use emacs line editor
+bindkey -e
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
@@ -36,17 +36,9 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-function chpwd() {
-	emulate -L zsh
-	cxc -p "$PWD"
-}
-
-function cx() {
-	local output="`cxc -- \"$1\"`"
-	if test -d $output; then
-		cd "`cxc -- $1`"
-	fi
-}
+if [ -d /usr/local/share/cx ]; then
+	source /usr/local/share/cx/cx.zsh
+fi
 
 export EDITOR=vi
 export VISUAL=vi
