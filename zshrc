@@ -36,9 +36,7 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-if [ -d /usr/local/share/cx ]; then
-	source /usr/local/share/cx/cx.zsh
-fi
+source /usr/local/share/cx/cx.zsh
 
 export EDITOR=vi
 export VISUAL=vi
