@@ -73,19 +73,25 @@
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 
-(load-theme 'zenburn t)
+;; C
+(setq-default c-default-style "bsd"
+	      c-basic-offset 8
+	      tab-width 8
+	      indent-tabs-mode t)
 
-; lisp
+;; lisp
 (setq inferior-lisp-program "/usr/bin/sbcl"
       slime-contribs '(slime-fancy))
 
-; python
+;; python
 (add-hook 'python-mode-hook
 	  (lambda ()
 	    (setq indent-tabs-mode t)))
 
-; javascript
+;; javascript
 (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
+
+(load-theme 'zenburn t)
 
 (global-flycheck-mode)
 (menu-bar-mode -1)
