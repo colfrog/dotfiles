@@ -86,7 +86,7 @@
 ;; python
 (add-hook 'python-mode-hook
 	  (lambda ()
-	    (setq indent-tabs-mode t)))
+	    (setq indent-tabs-mode nil)))
 
 ;; javascript
 (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
