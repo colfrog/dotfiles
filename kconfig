@@ -2,7 +2,7 @@
 # Automatically generated file; DO NOT EDIT.
 # Linux/x86 6.6.59 Kernel Configuration
 #
-CONFIG_CC_VERSION_TEXT="gcc (Debian 14.2.0-6) 14.2.0"
+CONFIG_CC_VERSION_TEXT="gcc (Debian 14.2.0-8) 14.2.0"
 CONFIG_CC_IS_GCC=y
 CONFIG_GCC_VERSION=140200
 CONFIG_CLANG_VERSION=0
@@ -5535,7 +5535,15 @@ CONFIG_JBD2=y
 CONFIG_FS_MBCACHE=y
 # CONFIG_REISERFS_FS is not set
 # CONFIG_JFS_FS is not set
-# CONFIG_XFS_FS is not set
+CONFIG_XFS_FS=y
+# CONFIG_XFS_SUPPORT_V4 is not set
+# CONFIG_XFS_SUPPORT_ASCII_CI is not set
+# CONFIG_XFS_QUOTA is not set
+# CONFIG_XFS_POSIX_ACL is not set
+# CONFIG_XFS_RT is not set
+# CONFIG_XFS_ONLINE_SCRUB is not set
+# CONFIG_XFS_WARN is not set
+# CONFIG_XFS_DEBUG is not set
 # CONFIG_GFS2_FS is not set
 # CONFIG_OCFS2_FS is not set
 CONFIG_BTRFS_FS=y
