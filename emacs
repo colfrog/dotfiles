@@ -11,7 +11,7 @@
    '("84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "04232a0bfc50eac64c12471607090ecac9d7fd2d79e388f8543d1c5439ed81f5" default))
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(elpy lsp-mode rustic npm flycheck-clang-tidy clang-format rjsx-mode lispy ivy avy smart-mode-line-powerline-theme smart-mode-line markdown-preview-mode markdown-mode helm zoom ranger dired-sidebar dired-k eyebrowse ido-completing-read+ go-mode lua-mode magit nodejs-repl org python zenburn-theme git-gutter slime ##))
+   '(tuareg elpy lsp-mode rustic npm flycheck-clang-tidy clang-format rjsx-mode lispy ivy avy smart-mode-line-powerline-theme smart-mode-line markdown-preview-mode markdown-mode helm zoom ranger dired-sidebar dired-k eyebrowse ido-completing-read+ go-mode lua-mode magit nodejs-repl org python zenburn-theme git-gutter slime ##))
  '(sml/mode-width (if (eq (powerline-current-separator) 'arrow) 'right 'full))
  '(sml/pos-id-separator
    '(""
@@ -80,7 +80,7 @@
 	      indent-tabs-mode t)
 
 ;; lisp
-(setq inferior-lisp-program "/usr/bin/sbcl"
+(setq inferior-lisp-program "sbcl"
       slime-contribs '(slime-fancy))
 
 ;; python
@@ -107,3 +107,5 @@
 
 (set-frame-parameter nil 'alpha-background 90) ; For current frame
 (add-to-list 'default-frame-alist '(alpha-background . 90))
+
+(add-to-list 'default-frame-alist '(font . "Iosevka Fixed Extended-10"))
