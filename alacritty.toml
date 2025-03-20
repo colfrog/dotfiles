@@ -4,6 +4,10 @@ opacity = 0.9
 
 [font]
 size = 9.0
+normal = { family = "Iosevka Term Extended", style = "Regular" }
+bold = { family = "Iosevka Term Extended", style = "Bold" }
+bold_italic = { family = "Iosevka Term Extended", style = "Bold Italic" }
+italic = { family = "Iosevka Term Extended", style = "Italic" }
 
 [colors.primary]
 background = "#3f3f3f"
