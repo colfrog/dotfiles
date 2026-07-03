@@ -87,6 +87,7 @@
 (add-hook 'python-mode-hook
 	  (lambda ()
 	    (setq indent-tabs-mode nil)))
+(add-hook 'python-mode-hook 'git-gutter-mode)
 
 ;; javascript
 (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
